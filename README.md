@@ -35,7 +35,7 @@ A disciplina de Desenvolvimento de Interfaces tem como objetivo capacitar o alun
 ## Autor
 
 **Pedro Barreto**  
-Estudante de [Nome do Curso] — []  
+Estudante de Ciências da Computação — Centro Universitário de Brasília  
 GitHub: [@PedroBarreto07](https://github.com/PedroBarreto07)
 
 ---
