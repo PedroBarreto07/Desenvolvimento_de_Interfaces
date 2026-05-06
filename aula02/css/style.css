@@ -1,0 +1,24 @@
+/*Estilização Básica*/
+body {
+    background-color: #f4f4f4; /*Cor de fundo cinza clara*/
+    font-family: Arial, sans-serif; /*Muda a fonte padrão*/
+    line-height: 1.6; /*Espaçamento entre linhas para melhor leitura*/
+}
+h1 {
+    color:#2c3e50; /*Azul escuro*/
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 3px solid #3498db; /*Linha azul no topo*/
+}
+
+a {
+    color: #e67e22; /*Laranja para destacar links*/
+    text-decoration: none; /*Remove o sublinhado*/
+}
+
+a:hover {
+    text-decoration: underline; /*Sublinha apenas quando passa o mouse*/
+}
