@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Dispositivos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Monitoramento de Dispositivos</h1>
+        <nav><a href="avancado.html">Ver Relatório Avançado</a></nav>
+    </header>
+    <main>
+        <table border="1"> <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Dispositivo</th>
+                    <th>Status</th>
+                </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+            <tr><td>001</td><td>Sensor Térmico</td><td>Ativo</td></tr>
+            <tr><td>002</td><td>Câmera IP</td><td>Inativo</td></tr>
+        </tbody>
+    </table>
+    </main>
+    <script>
+        // Seleciona o corpo da tabela pelo ID
+        const tabela = document.getElementById('corpo-tabela');
+        
+        // Conta quantas linhas (tr) existem dentro do tbody
+        const totalLinhas = tabela.getElementsByTagName('tr').length;
+        
+        console.log("Total de dispositivos monitorados: " + totalLinhas);
+        // Exemplo: Se houver 2 linhas, aparecerá 2 no console do navegador.
+    </script>
+    <script>
+            // Seleciona todas as linhas da tabela
+            const linhas = tabela.getElementsByTagName('tr');
+            
+            // Percorre cada linha da tabela
+            for (let i = 0; i < linhas.length; i++) {
+                // Pega o texto da terceira célula (Status)
+                let status = linhas[i].cells[2].innerText;
+            
+                // Verifica se o status é "Inativo"
+                if (status === "Inativo") {
+                    // Exibe um alerta no console
+                    console.warn("Atenção: Dispositivo " + (i + 1) + " está fora do ar!");
+                    alert("Atenção: Dispositivo " + (i + 1) + " está fora do ar!");
+                }
+            }
+    </script>
+</body>
+</html>
