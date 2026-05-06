@@ -24,7 +24,7 @@ A disciplina de Desenvolvimento de Interfaces tem como objetivo capacitar o alun
  Desenvolvimento_de_Interfaces
  ┣ 📂 aula-01
  ┣ 📂 aula-02
- ┣ 📂 auça-03
+ ┣ 📂 aula-03
  ┗ ...
 ```
 
