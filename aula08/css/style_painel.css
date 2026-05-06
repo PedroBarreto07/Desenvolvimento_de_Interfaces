@@ -1,0 +1,73 @@
+/* 1. RESET E BOX MODEL GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não quebra a largura */
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #cbd5e0; /* Cinza azulado */
+    padding: 40px 20px;
+}
+
+/* 2. CENTRALIZAÇÃO DO CONTEÚDO */
+.container-central {
+    width: 90%;              /* Ocupa 90% em ecrãs pequenos */
+    max-width: 800px;        /* Em ecrãs grandes, trava nos 800px */
+    margin: 0 auto;          /* A MÁGICA: Centraliza o dashboard na tela */
+    background-color: #ffffff;
+    padding: 30px;           /* Respiro interno do painel */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 30px;     /* Afasta o título dos KPIs */
+    color: #2d3748;
+}
+
+/* 3. LAYOUT LADO A LADO (KPIs) */
+.secao-kpis {
+    text-align: center;      /* Alinha as divs internas ao centro */
+    margin-bottom: 25px;     /* Afasta os KPIs dos alertas */
+}
+
+.quadro-kpi {
+    display: inline-block;   /* Permite ficar lado a lado */
+    width: 45%;              /* Ocupa quase metade do container */
+    margin: 2%;              /* Espaço entre os quadros */
+    padding: 20px;           /* Respiro interno do KPI */
+    background-color: #edf2f7;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+.valor {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+/* 4. LAYOUT EMPILHADO (ALERTAS) */
+.alerta-card {
+    padding: 15px 20px;      /* Padding assimétrico: mais nas laterais */
+    margin-bottom: 15px;     /* Margem para não colarem um no outro */
+    border-left: 6px solid;  /* Borda de destaque */
+    border-radius: 4px;
+}
+
+.erro {
+    background-color: #fff5f5;
+    color: #c53030;
+    border-left-color: #fc8181;
+}
+
+.aviso {
+    background-color: #f0fff4;
+    color: #2f855a;
+    border-left-color: #68d391;
+    margin-bottom: 0;        /* O último item não precisa de margem inferior */
+}
