@@ -1,4 +1,4 @@
-## Desenvolvimento de Interfaces
+## Objetivo
 
 Repositório criado para armazenar os projetos, exercícios e atividades desenvolvidos durante a disciplina de **Desenvolvimento de Interfaces**.
 
