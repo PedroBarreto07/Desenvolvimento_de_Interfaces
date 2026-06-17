@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f3;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.painel-estufas {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 380px;
+}
+
+.estufa-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+
+/* Classes que o aluno deve ativar via JavaScript */
+.perigo {
+    color: #c0392b;
+    font-weight: bold;
+    background-color: #fce4d6;
+}
+
+.bloqueado {
+    background-color: #7f8c8d;
+    color: white;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}

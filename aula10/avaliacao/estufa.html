@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Estufas</title>
+    <link rel="stylesheet" href="css/estufa.css">
+</head>
+<body>
+
+    <div class="painel-estufas">
+        <h2>Painel de Controle Biológico</h2>
+        <p>Clique no botão abaixo para analisar o solo atual:</p>
+
+        <ul id="lista-estufas">
+            <li class="estufa-item">Estufa 01 - Umidade: 37% (Baixa)</li>
+            <li class="estufa-item">Estufa 02 - Umidade: 55%</li>
+            <li class="estufa-item">Estufa 03 - Umidade: 32% (Baixa)</li>
+            <li class="estufa-item">Estufa 04 - Umidade: 60%</li>
+            <li class="estufa-item">Estufa 05 - Umidade: 28% (Baixa)</li>
+            <li class="estufa-item">Estufa 06 - Sensor Inoperante</li>
+        </ul>
+
+        <button onclick="executar()" id="btn-analisar">Verificar Solo</button>
+    </div>
+
+    <script src="js/estufa.js"></script>
+</body>
+</html>
