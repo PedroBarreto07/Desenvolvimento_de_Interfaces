@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Sensor</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Dispositivos</h1>
+        <nav><a href="login.html">Sair / Logout</a></nav>
+    </header>
+    <main>
+        <form action="#" method="GET">
+            <fieldset>
+                <legend>Informações do Dispositivo</legend>
+                <label for="nome">Nome do Sensor:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Ex: Sensor Sala 01"
+                  required>
+
+                <label for="tipo">Tipo</label>  
+                <select id="tipo" name="tipo">
+                    <option value="temp">Temperatura</option>
+                    <option value="pres">Presença</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Parâmetros</legend>
+                <label for="limite">Limite Máximo:</label>
+                <input type="number" id="data_inst" name="data_inst">
+            
+
+                <label for="data_inst">Data de Instalação:</label>
+                <input type="date" id="data_inst" name="data_inst">
+            </fieldset>
+            
+
+            <button type="submit">Gravar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </main>
+
+    <br>
+    <footer>
+      <div id="meuModal" class="modal-container">
+        <div class="modal-conteudo">
+          <h3>Confirmação de Dados</h3>
+          <p id="dados-dispositivo"></p>
+          <button onclick="fecharModal()">Fechar</button>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // Seleciona o formulário e o modal
+        const formCadastro = document.querySelector('form');
+        const modal = document.getElementById('meuModal');
+        const textoModal = document.getElementById('dados-dispositivo');
+        
+        // Escuta o momento do clique no botão de enviar
+        formCadastro.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede a página de recarregar
+        
+            // Captura os valores dos campos
+            const nome = document.getElementById('nome').value;
+            const tipo = document.querySelector('select').value;
+        
+            // Monta o texto e exibe o modal
+            textoModal.innerHTML = `<strong>Nome:</strong> ${nome} <br> <strong>Tipo:</strong> ${tipo}`;
+            modal.style.display = 'flex'; 
+        });
+        
+        function fecharModal() {
+            modal.style.display = 'none';
+        }
+        </script>
+        
+ 
+    
+</body>
+</html>

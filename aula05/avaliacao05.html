@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade e Componentes Avançados de Formulário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Auditoria de Segurança</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="#" method="GET">
+                <fieldset>
+                    <legend>Identificação do Equipamento</legend>
+
+                    <label for="id_equipamento">ID do Equipamento:</label>
+                    <input type="text" id="id_equipamento" name="id_equipamento"
+                           required
+                           pattern="[A-Z]{2}-[0-9]{4}"
+                           title="Siga o padrão: Duas letras maiúsculas, traço, quatro números, (Ex: EQ-1234)"
+                           placeholder="Ex: FF-8989">
+
+                    <label for="pavimento">Categoria de Segurança:</label>
+                    <select id="pavimento" name="pavimento" required>
+                        <option value="">Selecione o local...</option>
+
+                        <optgroup label="Grupo EPI">
+                            <option value="capacete">Capacete</option>
+                            <option value="luvas">Luvas</option>
+                        </optgroup>
+
+                        <optgroup label="Grupo EPC">
+                            <option value="cones">Cones</option>
+                            <option value="extintor">Extintor</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Parecer Técnico</legend>
+
+                    <label for="relato">Relato de Irregularidades:</label>
+                    <textarea id="relato" name="relato"
+                              rows="6"
+                              maxlength="200"
+                              placeholder="Registre aqui as últimas ocorrências ou trocas de componentes..."></textarea>
+                    <p><small>Limite máximo de 200 caracteres para o log.</small></p>
+                </fieldset>
+
+                <div class="acoes">
+                    <button type="submit">Finalizar Auditoria</button>
+                    <button type="reset">Limpar Tudo</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+
+    
+</body>
+</html>

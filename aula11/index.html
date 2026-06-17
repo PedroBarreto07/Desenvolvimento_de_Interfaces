@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 11 - APIs Brasil</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Centro de Inteligência Brasil</h1>
+
+        <section class="modulo">
+            <h2>Localização de Ativos (CEP)</h2>
+            <input type="text" id="inputCep" placeholder="Digete o CEP (ex:01001000)">
+            <button onclick="buscarCEP()">Localizar</button>
+            <div id="resultadoEndereco"></div>
+        </section>
+
+        <section class="modulo">
+            <h2>Verificador de Bancos (Cód. Compensação)</h2>
+            <input type="number" id="inputBanco" placeholder="Ex: 1 (BB), 237 (Bradesco)">
+            <button onclick="buscarBanco()">Verificar Banco</button>
+            <div id="resultadoBanco"></div> 
+        </section>
+    </div>
+    <script src="js/api.js"></script>
+    
+</body>
+</html>
