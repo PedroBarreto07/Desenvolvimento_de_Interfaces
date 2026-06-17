@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#map {
+  height: 600px; /* Altura generosa para visualizar o DF */
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Classes para os filtros de cores nos ícones padrão do Leaflet */
+
+.icon-vermelho {
+  filter: hue-rotate(150deg) brightness(0.8);
+} /* Fábrica */
+
+.icon-verde {
+  filter: hue-rotate(280deg);
+} /* Loja */
+
+.icon-azul {
+  filter: none;
+} /* Armazém (Padrão) */

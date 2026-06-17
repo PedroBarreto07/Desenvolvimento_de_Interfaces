@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Industrial v1.0</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Painel de Controle de Inventário</h1>
+            <p>Sincronizado com MockAPI Cloud</p>
+        </header>
+
+        <div class="row-charts">
+            <div id="grafico-barras" class="chart-box"></div>
+            <div id="grafico-pizza" class="chart-box"></div>
+        </div>
+
+        <section class="row-table">
+            <h2>Detalhamento do Estoque</h2>
+            <table id="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Identificador</th>
+                        <th>Produto</th>
+                        <th>Qtd em Estoque</th>
+                        <th>Valor Unitário</th>
+                        <th>Total Investido</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela">
+                </tbody>
+            </table>
+        </section>
+
+        <div id="status-api"></div>
+    </div>
+    <script src="js/graficos.js"></script>
+</body>
+</html>
