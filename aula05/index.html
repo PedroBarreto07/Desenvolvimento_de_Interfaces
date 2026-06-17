@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Manutenção - Tutorial 05</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Chamados Técnicos</h1>
+        <p>Preencha os dados abaixo para registrar uma nova ocorrência</p>
+    </header>
+
+    <main>
+        <section>
+            <form action="#" method="GET">
+                <fieldset>
+                    <legend>Dados do Técnico</legend>
+
+                    <label for="tecnico">Nome Completo:</label>
+                    <input type="text" id="tecnico" name="tecnico"
+                           required minlength="5"
+                           placeholder="Digite seu nome completo">
+                 </fieldset>
+
+                 <fieldset>
+                    <legend>Detalhes da Intervenção</legend>
+
+                    <label for="setor">Setor Responsável:</label>
+                    <select id="setor" name="setor" required>
+                        <option value="">Selecione um setor...</option>
+                        <option value="ti">Tecnologia da Informação</option>
+                        <option value="manut">Manutenção Predial</option>
+                        <option value="infra">Infraestrutura</option>
+                        <option value="eletr">Eletrônica</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="descricao">Relatório do Problema:</label>
+                    <textarea id="descricao" name="descricao"
+                              rows="5" required
+                              placeholder="Descreva detalhadamente os sintomas e peças afetadas..."></textarea>
+                 </fieldset>
+
+                 <div class="acoes">
+                    <button type="submit">Enviar Relatório</button>
+                    <button type="reset">Limpar Formulário</button>
+                 </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Sistema de Dashboard Industrial</p>
+    </footer>
+            
+
+                 
+
+    
+</body>
+</html>
