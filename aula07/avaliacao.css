@@ -1,0 +1,104 @@
+/*1. Reset e base */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e9ecef;
+    display: flex; /* Apenas para centralizar o exemplo */
+    justify-content: center;
+    padding-top: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 2. Estilização do Cartão */
+.cartao {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    /* Borda Grossa na esquerda (estilo industrial) */
+    border-left: 8px solid #2c3e50;
+    text-align: center;
+    margin: 20px;
+}
+
+.cartao02 {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    /* Borda Grossa na esquerda (estilo industrial) */
+    border-left: 8px solid red;
+    text-align: center;
+}
+
+/* 3. Tipografia e Cores */
+h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.status-online {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.status-online02 {
+    color: red;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.detalhes {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.detalhes02 {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* 4. O Botão (Interação) */
+.botao {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.botao02 {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+
+.botao:hover {
+    background-color: #2980b9;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Registro Técnico</title>
+    <link rel="stylesheet" href="avaliacao.css">
+</head>
+<body>
+    <header>
+        <h1>Painel de Registro Técnico</h1>
+    </header>
+    <main>
+        <form action="#" method="GET">
+            <fieldset>
+                <legend>Credenciais</legend>
+                <label for="nome">E-mail:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="teste@gmail.com"
+                  required>
+                <br><br>
+                <label for="tipo">Senha:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="*******"
+                  required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Status de Inspeção</legend>
+                <label for="data_inst">Data:</label>
+                <input type="date" id="data_inst" name="data_inst">
+                <br><br>
+
+                <label for="color">Cor do Painel:</label>
+                <input type="color">
+                <br><br>
+
+                <label for="range">Ruído:</label>
+                <input type="range">
+                <br><br>
+
+                <label for="prioridade">Prioridade:</label>
+                <input type="radio" name="prioridade" value="rotina" id="rotina">
+                <label for="rotina">Rotina</label>
+                <input type="radio" name="prioridade" value="urgente" id="urgente" checked>
+                <label for="urgente">Urgente</label>
+                <br><br>
+
+                <label for="verificação">Verificação:</label>
+                <input type="checkbox" id="cabos" name="verificação" value="cabos">
+                <label for="cabos">Cabos</label>
+                <input type="checkbox" id="sensores" name="verificação" value="sensores">
+                <label for="sensores">Sensores</label>
+                <input type="checkbox" id="estrutura" name="verificação" value="estrutura">
+                <label for="estrutura">Estrutura</label>
+
+            </fieldset>
+
+            <button type="submit">Enviar Registro</button>
+            <button type="reset">Limpar Tudo</button>
+        </form>
+    </main>
+    
+</body>
+</html>

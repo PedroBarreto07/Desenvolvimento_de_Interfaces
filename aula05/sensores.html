@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Industrial de Sensores - Tutorial 05</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel Industrial v1.0</h1>
+        <p>Configuração e Monitoramento de dispositivos de hardware.</p>
+        <nav>
+            <a href="index.html">Voltar para Chamados</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form action="#" method="GET">
+
+                <fieldset>
+                    <legend>Configuração de Hardware</legend>
+
+                    <label for="id_sensor">Código ID (Formato: AA-9999-A)</label>
+                    <input type="text" id="id_sensor" name="id_sensor"
+                           required
+                           pattern="[A-Z]{2}-[0-9]{4}-[A-Z]{1}"
+                           title="Siga o padrão: Duas letras maiúsculas, traço, quatro números, traço e uma letra (Ex: SN-2026-X)"
+                           placeholder="Ex: SN-2026-X">
+
+                    <label for="pavimento">Localização no Complexo:</label>
+                    <select id="pavimento" name="pavimento" required>
+                        <option value="">Selecione o local...</option>
+
+                        <optgroup label="Área de Produção">
+                            <option value="linha_a">Linha de Montagem A</option>
+                            <option value="linha_b">Linha de Montagem B</option>
+                            <option value="usina">Usina de Processamento</option>
+                        </optgroup>
+
+                        <optgroup label="Setor Administrativo">
+                            <option value="escritorio">Escritórios Centrais</option>
+                            <option value="ti_sala">Sala de Servidores (TI)</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Log de Opereção</legend>
+
+                    <label for="historico">Histórico de Falhas e Manutenções:</label>
+                    <textarea id="historico" name="hisotrico"
+                              rows="8"
+                              maxlength="200"
+                              placeholder="Registre aqui as últimas ocorrências ou trocas de componentes..."></textarea>
+                    <p><small>Limite máximo de 200 caracteres para o log.</small></p>
+                </fieldset>
+
+                <div class="acoes">
+                    <button type="submit">Atualizar Sensor</button>
+                    <button type="reset">Limpar Dados</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Atenção: Alterações de ID requerem permissão de administrador.</p>
+    </footer>
+
+
+    <input type="text" id="id_sensor" name="id_sensor" 
+                           required 
+                           pattern="[A-Z]{2}-[0-9]{4}-[A-Z]{1}" 
+                           title="Siga o padrão: Duas letras maiúsculas, traço, quatro números, traço e uma letra (Ex: SN-2026-X)"
+                           placeholder="Ex: SN-2026-X">
+
+<span id="feedback-codigo"></span>
+<script>
+    const campoCodigo = document.getElementById('id_sensor');
+    const feedback = document.getElementById('feedback-codigo');
+    const formSete = document.querySelector('form');
+    
+    // 1. Validação em tempo real
+    campoCodigo.addEventListener('input', () => {
+        const padrao = /^[A-Z]{2}-[0-9]{4}-[A-Z]{1}$/;
+        
+        if (padrao.test(campoCodigo.value)) {
+            campoCodigo.style.borderColor = "#2ecc71"; // Verde (Sucesso)
+            feedback.innerText = "✅ Formato de série válido!";
+            feedback.style.color = "#2ecc71";
+        } else {
+            campoCodigo.style.borderColor = "#e74c3c"; // Vermelho (Erro)
+            feedback.innerText = "❌ Formato esperado: AA-0000-A";
+            feedback.style.color = "#e74c3c";
+        }
+    });
+    
+    // 2. Modal com Resumo Técnico (Textarea e Selects)
+    formSete.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const categoria = document.querySelector('select').value;
+        const observacoes = document.querySelector('textarea').value;
+        
+        // Aqui reutilizamos a lógica de modal do Tutorial 04, 
+        // mas agora injetando textos longos e seleções de categoria.
+        alert(`Dispositivo Registado!\nCategoria: ${categoria}\nObservações: ${observacoes}`);
+    });
+</script>
+    
+
+
+    
+</body>
+</html>
